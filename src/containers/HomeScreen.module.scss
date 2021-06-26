@@ -1,0 +1,80 @@
+@use "../shared/styles/typography.scss";
+
+.home {
+  font: typography.$body1;
+  padding-inline: 16px;
+  max-width: 1366px;
+  margin-inline: auto;
+}
+
+.home__title {
+  font: typography.$headline5;
+  text-align: center;
+  padding-block: 16px;
+}
+
+.home__content {
+  padding-block: 16px;
+}
+
+.card__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  gap: 24px;
+}
+
+.card {
+  box-shadow: 0 0 3px rgba(0, 0, 0);
+  border-radius: 10px;
+  padding: 16px;
+  transition: all 0.5s ease-in-out;
+  background: linear-gradient(
+    40deg,
+    rgba(237, 44, 73, 1) 0%,
+    rgba(62, 84, 163, 1) 100%
+  );
+
+  filter: grayscale(50%);
+  &:hover {
+    transform: scale(1.1);
+    filter: grayscale(0);
+  }
+}
+
+.card__img {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+  height: 20em;
+
+  & img,
+  & div {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.card__heading {
+  display: block;
+  font: typography.$card-headline;
+  transition: all 0.3s linear;
+  margin-block-start: 16px;
+  color: #fff;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home__title {
+    font: typography.$headline3;
+  }
+} ;

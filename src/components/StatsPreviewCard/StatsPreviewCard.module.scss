@@ -1,0 +1,122 @@
+@use "shared/colors.scss";
+@use "shared/typography.scss";
+@use "shared/breakpoints.scss";
+
+.statsPreviewCard_wrapper {
+  background: colors.$main-background;
+  padding-inline: 24px;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.statsPreviewCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: colors.$card-background;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+.card__image {
+  width: 100%;
+  height: 300px;
+
+  & div {
+    background-color: colors.$accent;
+    height: 100%;
+  }
+
+  & img {
+    mix-blend-mode: multiply;
+    opacity: 0.73;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+  }
+}
+
+.card__content {
+  margin-block: 32px;
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  align-self: center;
+  gap: 32px;
+}
+
+.card__title {
+  font: typography.$headline1;
+  color: colors.$main-heading;
+  text-align: center;
+  margin-inline: 24px;
+}
+
+.card__paragraph {
+  color: colors.$main-paragraph;
+  text-align: center;
+  font: typography.$card-paragraph;
+  margin-inline: 28px;
+}
+
+.accent {
+  color: colors.$accent;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  color: colors.$stats;
+  gap: 24px;
+  align-self: center;
+  text-align: center;
+  margin-block-start: 24px;
+}
+
+.stat__headline {
+  font: typography.$stats-headline;
+}
+
+.stat__description {
+  font: typography.$stat-description;
+  color: colors.$stat-description;
+  text-transform: uppercase;
+}
+
+@media only screen and(min-width: breakpoints.$Desktop) {
+  .statsPreviewCard {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 1120px;
+  }
+
+  .card__title {
+    font: typography.$headline2;
+  }
+
+  .card__content {
+    margin-inline-start: 80px;
+    margin-inline-end: 32px;
+    > * {
+      text-align: left;
+      margin-inline: 0;
+      align-self: flex-start;
+    }
+  }
+
+  .card__image {
+    max-width: 550px;
+    height: 450px;
+    margin-block: auto;
+  }
+
+  .stats {
+    flex-direction: row;
+    gap: 72px;
+    text-align: left;
+    margin-block-start: 40px;
+  }
+}

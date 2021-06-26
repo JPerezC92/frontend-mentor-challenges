@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Nova+Mono&display=swap');
+
+// ### Font
+$JetBrainsMono: 'JetBrains Mono', monospace;
+$NovaMono: 'Nova Mono', monospace;
+
+// ## Headlines
+$headline1: bold 95px / 153.71px $JetBrainsMono;
+$headline2: bold 59px / 95.46px $JetBrainsMono;
+$headline3: bold 48px / 77.66px $JetBrainsMono;
+$headline4: bold 34px / 55.01px $JetBrainsMono;
+$headline5: bold 24px / 38.83px $JetBrainsMono;
+
+$card-headline: bold 18px / 26px $JetBrainsMono;
+
+// ## Body
+$body1: normal 16px / 25.89px $NovaMono;
+$body2: normal 14px / 22.65px $NovaMono;
