@@ -1,6 +1,6 @@
-@use "shared/colors.scss";
-@use "shared/typography.scss";
-@use "shared/breakpoints.scss";
+@use "styles/colors.scss";
+@use "styles/typography.scss";
+@use "styles/breakpoints.scss";
 
 .statsPreviewCard_wrapper {
   background: colors.$main-background;

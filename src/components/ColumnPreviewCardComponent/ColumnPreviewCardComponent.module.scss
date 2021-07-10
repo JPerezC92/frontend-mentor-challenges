@@ -1,0 +1,94 @@
+@use "styles/colors.scss";
+@use "styles/typography.scss";
+@use "styles/breakpoints.scss";
+
+.wrapper {
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  padding-inline: 16px;
+  padding-block: 88px;
+}
+
+.card__grid {
+  margin: auto;
+  border-radius: 7px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18em), 1fr));
+  max-width: 950px;
+}
+
+.background_v1 {
+  background-color: colors.$background-v1;
+}
+
+.background_v2 {
+  background-color: colors.$background-v2;
+}
+
+.background_v3 {
+  background-color: colors.$background-v3;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 50px;
+}
+
+.card__title {
+  font: typography.$headline1;
+  color: colors.$heading;
+  text-transform: uppercase;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.card__paragraph {
+  color: colors.$paragraph;
+  font: typography.$paragraph;
+}
+
+.card__button {
+  border: 3px solid colors.$button;
+  font: typography.$button;
+  background-color: colors.$button;
+  mix-blend-mode: screen;
+  padding-block: 10px;
+  padding-inline: 30px;
+  border-radius: 50px;
+
+  transition: color, background 0.3s ease-in-out;
+
+  &:hover {
+    color: colors.$paragraph;
+    background-color: transparent;
+  }
+}
+
+@media only screen and (min-width: breakpoints.$Tablet) {
+  .card__grid {
+    :first-child {
+      grid-column: span 2;
+    }
+  }
+}
+
+@media only screen and (min-width: breakpoints.$Laptop) {
+  .card__grid {
+    :first-child {
+      grid-column: auto;
+    }
+  }
+
+  .card__content {
+    gap: 88px;
+  }
+}

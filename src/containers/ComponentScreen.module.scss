@@ -1,0 +1,23 @@
+@use "../shared/styles/typography.scss";
+@use "../shared/styles/colors.scss";
+
+.attribution {
+  font: typography.$attribution;
+  padding-inline: 16px;
+  max-width: 1366px;
+  margin-inline: auto;
+  text-align: center;
+  padding-block: 16px;
+
+  & > a[href*='http'] {
+    color: colors.$external-link;
+    font: typography.$accent;
+    background: url('/icon/external-link.svg') no-repeat 100% 0;
+    background-size: 16px 16px;
+    padding-right: 19px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

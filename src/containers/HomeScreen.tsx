@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,13 +9,13 @@ import { BASE_URL } from '@/helpers/globals';
 import Layout from '../components/shared/Layout';
 import styles from './HomeScreen.module.scss';
 
-const HomeScreen: React.FC = () => {
+const HomeScreen: FC = () => {
   const cardURL = `${BASE_URL}challenges/`;
   return (
     <>
       <Head>
         <title>Frontend Mentor Challenges</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon-32x32.png" />
       </Head>
 
       <Layout>
@@ -24,7 +25,7 @@ const HomeScreen: React.FC = () => {
           </h1>
 
           <ul className={`${styles.home__content} ${styles.card__grid}`}>
-            {challengesList.map((challenge, index) => (
+            {challengesList.map((challenge) => (
               <li key={challenge.name} className={styles.card}>
                 <div className={styles.card__img}>
                   <Image
@@ -40,7 +41,7 @@ const HomeScreen: React.FC = () => {
 
                 <Link href={`${cardURL}${nameToURL(challenge.name)}`}>
                   <a className={styles.card__heading} target="_blank">
-                    {`${index + 1}-${challenge.name}`}
+                    {`${challenge.name}`}
                   </a>
                 </Link>
               </li>

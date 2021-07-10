@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+// ### Body Copy
+$font-size: 15px;
+
+// ### Font
+$BigShouldersDisplay-font: 'Big Shoulders Display', cursive;
+$LexendDeca-font: 'Lexend Deca', sans-serif;
+
+// ## Headlines
+$headline1: bold 40px/46.71px $BigShouldersDisplay-font;
+$button: normal 15px/22px $LexendDeca-font;
+$paragraph: normal 15px/22px $LexendDeca-font;
+// $headline2: bold 34px/40.71px $LexendDeca-font;
+// $card-paragraph: normal 15px/29px $Inter-font;
+// $stats-headline: bold 26px/35px $Inter-font;
+// $stat-description: normal 12px/29px $LexendDeca-font;

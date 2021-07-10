@@ -11,6 +11,11 @@ export const challengesList: IChallenge[] = [
     component: 'StatsPreviewCard',
   },
   {
+    name: '3-column preview card component',
+    img: 'mobile-preview.png',
+    component: 'ColumnPreviewCardComponent',
+  },
+  {
     name: 'Test Component',
     img: 'mobile-preview.png',
     component: 'TestComponent',
